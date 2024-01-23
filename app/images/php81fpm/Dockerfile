@@ -8,8 +8,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 WORKDIR /var/www
 
-RUN composer create-project --prefer-dist yiisoft/yii2-app-advanced yii-project
-
 RUN php init
 
 RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
